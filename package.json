@@ -1,10 +1,11 @@
 {
   "private": true,
-  "webpackConfigJaid": "universalLib",
+  "webpackConfigJaid": "nodeLib",
   "version": "0.1.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "@babel/runtime": "^7.4.5"
+    "loader-utils": "^1.2.3",
+    "schema-utils": "^1.0.0"
   },
   "devDependencies": {
     "acorn": "^6.1.1",
@@ -13,6 +14,7 @@
     "eslint": "^6.0.1",
     "eslint-config-jaid": "^1.17.0",
     "jest": "^24.8.0",
+    "pify": "^4.0.1",
     "rimraf": "^2.6.3",
     "webpack": "^4.35.0",
     "webpack-config-jaid": "^5.15.0"
@@ -26,7 +28,6 @@
     "build:dev": "NODE_ENV=development webpack",
     "test": "npm run build:prod && NODE_ENV=production MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/production) jest --runInBand",
     "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
-    "test:dev": "npm run build:dev && NODE_ENV=test MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/development) jest --runInBand",
-    "test:debug": "DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand"
+    "test:dev": "npm run build:dev && NODE_ENV=test MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/development) jest --runInBand"
   }
 }
