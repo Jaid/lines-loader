@@ -12,6 +12,7 @@ import optionsSchema from "./optionsSchema.yml"
 export default function (source) {
   const options = {
     sort: false,
+    random: false,
     ...getOptions(this),
     ...this.resourceQuery ? parseQuery(this.resourceQuery) : undefined,
   }
@@ -23,5 +24,9 @@ export default function (source) {
   if (options.sort) {
     processedLines = processedLines.sort()
   }
-  return `export default ${JSON.stringify(processedLines)}`
+  if (options.random) {
+    return `const lines = ${JSON.stringify(processedLines)}\nexport default () => lines[Math.floor(Math.random() * lines.length)]`
+  } else {
+    return `export default ${JSON.stringify(processedLines)}`
+  }
 }

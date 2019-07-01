@@ -3,3 +3,5 @@ additionalProperties: false
 properties:
   sort:
     type: boolean
+  random:
+    type: boolean
