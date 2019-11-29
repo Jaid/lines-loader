@@ -28,7 +28,8 @@
     "build:dev": "NODE_ENV=development webpack",
     "test": "npm run build:prod && NODE_ENV=production MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/production) jest --runInBand",
     "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
-    "test:dev": "npm run build:dev && NODE_ENV=test MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/development) jest --runInBand"
+    "test:dev": "npm run build:dev && NODE_ENV=test MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/development) jest --runInBand",
+    "prepareActionJest": "npm run build:prod"
   },
   "name": "lines-loader"
 }
