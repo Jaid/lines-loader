@@ -1,5 +1,4 @@
 {
-  "private": true,
   "webpackConfigJaid": "nodeLib",
   "version": "1.1.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
@@ -30,5 +29,6 @@
     "test": "npm run build:prod && NODE_ENV=production MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/production) jest --runInBand",
     "test:coverage": "npm run test:dev -- --coverage --json --outputFile=dist/jest/stats.json",
     "test:dev": "npm run build:dev && NODE_ENV=test MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/development) jest --runInBand"
-  }
+  },
+  "name": "lines-loader"
 }
