@@ -31,5 +31,6 @@
     "test:dev": "npm run build:dev && NODE_ENV=test MAIN=$(npx find-by-extension-cli js --fullPath --cwd dist/package/development) jest --runInBand",
     "prepareActionJest": "npm run build:prod"
   },
-  "name": "lines-loader"
+  "name": "lines-loader",
+  "description": "Webpack loader that loads a text file as an array of its lines."
 }
