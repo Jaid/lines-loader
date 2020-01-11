@@ -59,8 +59,8 @@ All options can be set inline. Example:
 
 `index.js`
 ```javascript
-import lines from "./example.lines.txt"
-import linesNormalized from "./example.lines.txt?sorted&unique&nonEmpty"
+import lines from "./example.lines.txt?nonEmpty=false"
+import linesNormalized from "./example.lines.txt?sort&unique"
 
 console.log(lines.length)
 console.log(linesNormalized.length)
