@@ -13,7 +13,7 @@ import optionsSchema from "./optionsSchema.yml"
 export default function (source) {
   const options = {
     sort: false,
-    random: false,
+    randomPick: false,
     trim: true,
     nonEmpty: true,
     unique: false,
@@ -35,7 +35,7 @@ export default function (source) {
   if (options.sort) {
     processedLines = processedLines.sort()
   }
-  if (options.random) {
+  if (options.randomPick) {
     return `const lines = ${JSON.stringify(processedLines)}\nexport default () => lines[Math.floor(Math.random() * lines.length)]`
   } else {
     return `export default ${JSON.stringify(processedLines)}`

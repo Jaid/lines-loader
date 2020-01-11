@@ -3,7 +3,7 @@ additionalProperties: false
 properties:
   sort:
     type: boolean
-  random:
+  randomPick:
     type: boolean
   trim:
     type: boolean
