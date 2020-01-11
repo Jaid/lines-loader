@@ -1,6 +1,7 @@
 /** @module lines-loader */
 
 import {getOptions, parseQuery} from "loader-utils"
+import {uniq} from "lodash"
 import validateOptions from "schema-utils"
 
 import optionsSchema from "./optionsSchema.yml"
@@ -15,6 +16,7 @@ export default function (source) {
     random: false,
     trim: true,
     nonEmpty: true,
+    unique: false,
     ...getOptions(this),
     ...this.resourceQuery ? parseQuery(this.resourceQuery) : undefined,
   }
@@ -26,6 +28,9 @@ export default function (source) {
   }
   if (options.nonEmpty) {
     processedLines = processedLines.filter(line => line.length)
+  }
+  if (options.unique) {
+    processedLines = uniq(processedLines)
   }
   if (options.sort) {
     processedLines = processedLines.sort()
