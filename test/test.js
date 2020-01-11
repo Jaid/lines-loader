@@ -1,3 +1,4 @@
+import CleanWebpackPlugin from "clean-webpack-plugin"
 import path from "path"
 import pify from "pify"
 
@@ -25,6 +26,7 @@ it("should run", async () => {
         },
       ],
     },
+    plugins: [CleanWebpackPlugin],
   }
   await webpack(webpackConfig)
   const result = require(path.join(webpackConfig.output.path, "main.js")).default
