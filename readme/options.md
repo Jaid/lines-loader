@@ -5,3 +5,5 @@ nonEmpty|`true`|If `true`, empty lines will be skipped. If option `trim` is `tru
 sort|`false`|If `true`, extracted lines will be sorted alphabetically.
 unique|`false`|If `true`, there will not be any duplicates in extracted lines.
 randomPick|`false`|If `true`, the exported value will be a function instead of a `string[]`. That function does not take any arguments an returns a random pick from the extracted lines.
+
+All options can be overwritten in any asset import by appending a query string.
