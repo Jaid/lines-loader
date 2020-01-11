@@ -13,14 +13,17 @@ export default function (source) {
   const options = {
     sort: false,
     random: false,
+    trim: true,
     ...getOptions(this),
     ...this.resourceQuery ? parseQuery(this.resourceQuery) : undefined,
   }
   validateOptions(optionsSchema, options, _PKG_TITLE)
   const lines = source.split(/[\n\r]/)
   let processedLines = lines
-    .map(line => line.trim())
-    .filter(line => line.length)
+  if (options.trim) {
+    processedLines = processedLines.map(line => line.trim())
+  }
+  // .filter(line => line.length)
   if (options.sort) {
     processedLines = processedLines.sort()
   }

@@ -1,5 +1,4 @@
 import path from "path"
-
 import pify from "pify"
 
 const webpack = pify(require("webpack"))
