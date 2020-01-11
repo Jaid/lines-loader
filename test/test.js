@@ -46,8 +46,23 @@ it("should run", async () => {
   ])
   expect(result.unique).toStrictEqual([
     "chloe",
-    "max",
-    "amber",
+    "maxine",
+    "rachel",
   ])
-  expect(["chloe", "max", "amber"].includes(result.pick)).toBeTruthy()
+  expect(result.fromReadme).toStrictEqual([
+    "maxine",
+    "chloe",
+    "",
+    "rachel",
+    "",
+    "",
+    "chloe",
+    "",
+  ])
+  expect(result.fromReadmeNormalized).toStrictEqual([
+    "chloe",
+    "maxine",
+    "rachel",
+  ])
+  expect(["chloe", "maxine", "rachel"].includes(result.pick)).toBeTruthy()
 })
