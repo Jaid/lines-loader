@@ -14,9 +14,79 @@
 
 
 
+## Usage
+
+Add the loader to your Webpack config:
+
+`webpack.config.js`
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.lines\.txt$/,
+        use: "lines-loader"
+      }
+    ]
+  }
+}
+```
+
+Now you can import corresponding files in your entry script:
+
+`index.js`
+```javascript
+import lines from "./example.lines.txt"
+
+console.log(lines.length)
+```
+
+`example.lines.txt`
+```text
+maxine
+chloe
+rachel
+```
+
+Variable `lines` in `index.js` will look like this:
+```javascript
+["maxine", "chloe", "rachel"]
+```
+
+## Advanced Usage
+
+All options can be set inline. Example:
+
+`index.js`
+```javascript
+import lines from "./example.lines.txt"
+import linesNormalized from "./example.lines.txt?sorted&unique&nonEmpty"
+
+console.log(lines.length)
+console.log(linesNormalized.length)
+```
+
+`example.lines.txt`
+```text
+maxine
+chloe
+
+rachel
 
 
+chloe
 
+```
+
+Variable `lines` in `index.js` will look like this:
+```javascript
+["maxine", "chloe", "", "rachel", "", "", "chloe", ""]
+```
+
+Variable `linesNormalized` in `index.js` will look like this:
+```javascript
+["chloe", "maxine", "rachel"]
+```
 
 ## Installation
 <a href="https://npmjs.com/package/lines-loader"><img src="https://img.shields.io/badge/npm-lines--loader-C23039?style=flat-square&logo=npm" alt="lines-loader on npm"/></a>
@@ -30,17 +100,6 @@ yarn add --dev lines-loader@^1.1.0
 
 
 
-<a name="module_lines-loader"></a>
-
-## Reference
-<a name="module_lines-loader.._default"></a>
-
-### lines-loader~\_default(source) ⇒ <code>string</code>
-**Kind**: inner method of [<code>lines-loader</code>](#module_lines-loader)  
-
-| Param | Type |
-| --- | --- |
-| source | <code>string</code> | 
 
 
 
