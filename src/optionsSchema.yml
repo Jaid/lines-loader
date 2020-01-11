@@ -5,3 +5,9 @@ properties:
     type: boolean
   random:
     type: boolean
+  trim:
+    type: boolean
+  unique:
+    type: boolean
+  nonEmpty:
+    type: boolean
