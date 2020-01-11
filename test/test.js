@@ -26,7 +26,7 @@ it("should run", async () => {
         },
       ],
     },
-    plugins: [CleanWebpackPlugin],
+    plugins: [new CleanWebpackPlugin],
   }
   await webpack(webpackConfig)
   const result = require(path.join(webpackConfig.output.path, "main.js")).default
