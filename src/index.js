@@ -14,6 +14,7 @@ export default function (source) {
     sort: false,
     random: false,
     trim: true,
+    nonEmpty: true,
     ...getOptions(this),
     ...this.resourceQuery ? parseQuery(this.resourceQuery) : undefined,
   }
@@ -23,7 +24,9 @@ export default function (source) {
   if (options.trim) {
     processedLines = processedLines.map(line => line.trim())
   }
-  // .filter(line => line.length)
+  if (options.nonEmpty) {
+    processedLines = processedLines.filter(line => line.length)
+  }
   if (options.sort) {
     processedLines = processedLines.sort()
   }
