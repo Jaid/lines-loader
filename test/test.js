@@ -44,5 +44,10 @@ it("should run", async () => {
     "b",
     "d      f",
   ])
+  expect(result.unique).toStrictEqual([
+    "chloe",
+    "max",
+    "amber",
+  ])
   expect(["chloe", "max", "amber"].includes(result.pick)).toBeTruthy()
 })
