@@ -14,6 +14,7 @@
 
 
 
+
 ## Usage
 
 Add the loader to your Webpack config:
