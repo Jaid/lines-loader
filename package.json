@@ -19,7 +19,7 @@
     "pify": "^4.0.1",
     "rimraf": "^3.0.0",
     "webpack": "^4.41.5",
-    "webpack-config-jaid": "^10.0.0"
+    "webpack-config-jaid": "^11.0.0"
   },
   "scripts": {
     "clean": "rimraf dist/",
