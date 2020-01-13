@@ -1,9 +1,9 @@
 # lines-loader
 
 
-<a href="https://raw.githubusercontent.com/Jaid/lines-loader/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/lines-loader?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/lines-loader/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Flines-loader%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/lines-loader/commits"><img src="https://img.shields.io/github/commits-since/Jaid/lines-loader/v2.0.1?style=flat-square&logo=github" alt="Commits since v2.0.1"/></a> <a href="https://github.com/Jaid/lines-loader/commits"><img src="https://img.shields.io/github/last-commit/Jaid/lines-loader?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/lines-loader/issues"><img src="https://img.shields.io/github/issues/Jaid/lines-loader?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/lines-loader"><img src="https://img.shields.io/npm/v/lines-loader?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/lines-loader/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/lines-loader?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/lines-loader"><img src="https://img.shields.io/npm/dm/lines-loader?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/lines-loader/master/license.txt"><img src="https://img.shields.io/github/license/jaid/lines-loader?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor lines-loader"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/lines-loader/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Flines-loader%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/lines-loader/commits"><img src="https://img.shields.io/github/commits-since/jaid/lines-loader/v2.0.1?style=flat-square&logo=github" alt="Commits since v2.0.1"/></a> <a href="https://github.com/jaid/lines-loader/commits"><img src="https://img.shields.io/github/last-commit/jaid/lines-loader?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/lines-loader/issues"><img src="https://img.shields.io/github/issues/jaid/lines-loader?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/lines-loader"><img src="https://img.shields.io/npm/v/lines-loader?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/lines-loader/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/lines-loader?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/lines-loader"><img src="https://img.shields.io/npm/dm/lines-loader?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Webpack loader that loads a text file as an array of its lines.**
 
@@ -117,14 +117,13 @@ yarn add --dev lines-loader@^2.0.1
 
 
 
-
 ## Development
 
 
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/lines-loader.git
+git clone git@github.com:jaid/lines-loader.git
 cd lines-loader
 npm install
 ```
