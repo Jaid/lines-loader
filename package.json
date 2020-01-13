@@ -35,5 +35,9 @@
   },
   "name": "lines-loader",
   "description": "Webpack loader that loads a text file as an array of its lines.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/lines-loader"
+  }
 }
